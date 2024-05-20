@@ -1,8 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  components: [{
+    path: '~/shared/icons', prefix: 'Icon'
+  }, '~/components'],
   alias: {
-    css: "@@/assets/css",
+    css: "/<rootDir>/assets/css",
   },
-  css: ['~/assets/scss/main.scss'],
+  css: ['@/assets/css/main.css'],
 })
